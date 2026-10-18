@@ -5,8 +5,9 @@
 <title>Cathie Yun</title>
 <script>
 var pages = {home:1,digital:1,print:1,about:1,contact:1,tmobile:1,axs:1,energy:1,"cboe-gate":1,cboe:1,"telecom-gate":1,telecom:1,"credit-gate":1,credit:1};
+var aliases = {"ux-ui":"home"};
 var part = (location.pathname || "").replace(/^\/+|\/+$/g, "").split("/")[0].toLowerCase();
-var id = pages[part] ? part : "home";
+var id = aliases[part] || (pages[part] ? part : "home");
 location.replace("https://cathieyun.com/#/" + id);
 </script>
 <meta http-equiv="refresh" content="0; url=https://cathieyun.com/">
